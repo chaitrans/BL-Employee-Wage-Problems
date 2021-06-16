@@ -16,8 +16,9 @@ public class Empwage
 		int is_parttime_present = 2;
 		int daily_wage_array[] = new int[20];
 		
-		int i = 0; 
-		while(i<days_in_month && total_working_hr<max_working_hrs){
+		int i = 0;
+		 
+	        while(i<days_in_month && total_working_hr<max_working_hrs){
 			int emp_check = (int)(Math.floor(Math.random() * 10)) % 3;
 			switch (emp_check) {
 				case 1:
@@ -33,7 +34,8 @@ public class Empwage
 			total_working_hr += working_hr;
 			daily_wage_array[i] = working_hr * wage_per_hr;
 		}
-		for (int j=0; j<days_in_month; j++) {
+		//To display each day salary
+		for (int j=0; j<days_in_month; j++) {    
 			int day = j+1;
 			System.out.println("Day " + day + " wage is " + daily_wage_array[j]);
 			monthly_total_wage = monthly_total_wage + daily_wage_array[j];
