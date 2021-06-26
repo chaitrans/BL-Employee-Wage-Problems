@@ -23,8 +23,4 @@ public class EmployeeWage {
         this.totalWage = totalWage;
     }
 
-    @Override
-    public String toString() {
-        return "Monthly wage for " + companyName + " is " + totalWage;
-    }
 }
