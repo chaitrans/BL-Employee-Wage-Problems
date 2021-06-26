@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 /**
  * Added daily wage along with monthly wage.
- * @author Tushar Akhade
- * @since 19 Jun 2021
+ * @author Chaitra NS
+ * @since 26 Jun 2021
  */
 
 public class EmployeeWageBuilder implements EmpWageInterface {
