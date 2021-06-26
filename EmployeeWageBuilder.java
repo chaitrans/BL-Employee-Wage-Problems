@@ -8,6 +8,7 @@ import java.util.Map;
  * @since 26 Jun 2021
  */
 
+
 public class EmployeeWageBuilder implements EmpWageInterface {
     public static final int IS_FUllTime = 1;
     public static final int IS_PARTTIME = 2;
@@ -19,7 +20,9 @@ public class EmployeeWageBuilder implements EmpWageInterface {
 
     public static void main(String[] args) {
         EmployeeWageBuilder employeeWageBuilder = new EmployeeWageBuilder();
+
         employeeWageBuilder.addCompanyWage("d-mart", 100, 20, 100);
+
         employeeWageBuilder.addCompanyWage("jio-mart", 150, 25, 110);
         employeeWageBuilder.computeEmpWage();
         System.out.println("Total employee wage for d-mart " + employeeWageBuilder.getTotalWage("d-mart"));
@@ -30,12 +33,14 @@ public class EmployeeWageBuilder implements EmpWageInterface {
         companyToEmpWage = new HashMap<>();
     }
 
+
     @Override
     public void addCompanyWage(String companyName, int max_working_hrs, int days_in_month, int wage_per_hr) {
         EmployeeWage employeeWage = new EmployeeWage(companyName, max_working_hrs, days_in_month, wage_per_hr);
         companyEmpWageList.add(employeeWage);
         companyToEmpWage.put(companyName, employeeWage);
     }
+
 
    @Override
     public void computeEmpWage() {
@@ -45,11 +50,11 @@ public class EmployeeWageBuilder implements EmpWageInterface {
         }
     }
 
+
     @Override
     public int getTotalWage(String company) {
         return companyToEmpWage.get(company).totalWage;
     }
-
     private int computeEmpWage(EmployeeWage employeeWage) {
         int working_hr = 0;
         int total_working_hr = 0;
