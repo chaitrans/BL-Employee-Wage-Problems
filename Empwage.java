@@ -3,7 +3,7 @@ public class Empwage
 	public static final int IS_PART_TIME = 1;
         public static final int IS_FULL_TIME = 2;
         public static final int EMP_RATE_PER_HOUR = 20;
-	public static final int NUM_OF_WORKINGDAYS = 2;
+	public static final int NUM_OF_WORKINGDAYS = 20;
 	
 	public static void main(String[] args) {
 int empHrs = 0, empWage = 0, totalEmpWage = 0;
@@ -22,8 +22,8 @@ switch (empCheck)
 	   empHrs = 0;
 }
 	empWage = empHrs * EMP_RATE_PER_HOUR;
-	totalEmpWage = empWage;
+	totalEmpWage = totalEmpWage + empWage;
 }
-	System.out.println("Total Emp Wage: " + empWage);
+	System.out.println("Total Emp Wage: " + totalEmpWage);
 }
 }
